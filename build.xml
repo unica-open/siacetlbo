@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ##################################################### -->
+<!-- # Copyright 2006 (c) CSI Piemonte.                  # -->
+<!-- #                                                   # -->
+<!-- # build.xml file per compilazione e generazione     # -->
+<!-- # del pacchetto per il rilascio dell'applicazione.  # -->
+<!-- #                                                   # -->
+<!-- # Per una lista completa dei tasks eseguibili usare # -->
+<!-- # l'argomento di ant -projecthelp quando si         # -->
+<!-- # richiama questo build.xml.                        # -->
+<!-- ##################################################### -->
+
+
+<project xmlns:ivy="antlib:fr.jayasoft.ivy.ant"
+         basedir="."
+         default="package"
+         name="siacetlbo">
+
+    <description>Build file per la componente : [siacetlbo]</description>
+
+    <!-- -->
+    <property file="buildfiles/build.properties"/>
+    <property file="buildfiles/myenv.properties"/>
+
+	<!--
+	<antversion property="antversion" atleast="1.7"/>
+	-->
+	
+    <!-- ############################################################# -->
+    <!-- # Target: init                                              # -->
+    <!-- ############################################################# -->
+    <target name="init" description="Inizializza lo script Ant.">
+        <tstamp/>
+        <!-- se non specificato da riga di comando usa l'ambiente local -->
+        <property name="target" value="local"/>
+		<!--
+        <property file="buildfiles/${target}.properties" />
+		-->
+		<loadproperties srcFile="buildfiles/${target}.properties"/>
+		
+        <property name="target.dir" value="${build}/${target}"/>
+        <property name="componente.dir" value="${target.dir}/${componente}"/>
+
+        <!-- crea l'alberatura -->
+        <mkdir dir="${componente.dir}"/>
+        <mkdir dir="${target.dir}/archives"/>
+		<mkdir dir="${target.dir}/tmp"/>
+		<mkdir dir="${dist}/${target}"/>
+		<condition property="isWindows">
+			<os family="windows" />
+		</condition>
+
+		<condition property="isUnix">
+			<os family="unix" />
+		</condition>
+	
+    </target>
+
+
+    <!-- Copia tutte le risorse -->
+    <target name="process-resources" depends="init">
+        <!-- copia le risorse non filtrate -->
+        <copy todir="${target.dir}/${componente}">
+            <fileset dir="src/etlopen">
+                <exclude name="config/**/*"/>
+            </fileset>
+        </copy>
+
+        <!-- copia (e filtra) le risorse da filtrare -->
+        <echo level="info" message="Uso il file: ${target}.properties anche per filtrare le risorse"/>
+        <copy todir="${target.dir}/${componente}">
+            <fileset dir="src/etlopen">
+                <include name="config/**/*"/>
+            </fileset>
+            <filterset filtersfile="buildfiles/${target}.properties"/>
+        </copy>
+	
+    </target>
+
+	<target name="-gen-cfg.windows" description="genera i file di configurazione per i diversi ambienti" depends='init' if='isWindows'>
+		<echo>Generating config files using ${xterm.exe} ...</echo>
+		<pathconvert targetos="unix" property="basedir.nix" pathsep="\\\\">
+			<path location="${basedir}"/>
+		</pathconvert>
+		<echo>${basedir.nix}</echo>
+		<exec executable='${xterm.exe}'
+				output='${target.dir}/tmp/gen-cfg.log'
+				outputproperty='gen-cfg.output'
+				errorproperty='gen-cfg.error'>
+			<arg line='-exitwhendone'/>
+			<arg line='-exec "cd ${basedir.nix}/conf/scripts/ &amp;&amp; ll &amp;&amp; ./crea_file_configurazione.sh ${target}"'/>
+            <arg line='-log'/>
+			<arg line='-noX'/>
+		</exec>
+	</target>
+
+	<target name="-gen-cfg.nix" depends='init' if='isUnix'>
+		<echo>Generating config files using bash ... </echo>
+		<exec executable='/bin/bash' 
+				output='${target.dir}/tmp/gen-cfg.log'
+				dir='${basedir}/conf/scripts/'  
+				outputproperty='gen-cfg.output' errorproperty='gen-cfg.error'>
+			<arg line='./crea_file_configurazione.sh ${target}'/>
+		</exec>
+	</target>
+	
+	<target name='generate-configs' depends='process-resources, -gen-cfg.nix, -gen-cfg.windows' description="genera i file di configurazione per i diversi ambienti">
+	
+		<echo>shell output
+			${gen-cfg.output}
+		</echo>
+		<echo>shell error
+			${gen-cfg.error}
+		</echo>
+		
+		<!-- copia i file generati nella cartella di configurazione -->
+		<move todir='${target.dir}/siacetlbo/config/cfg'>
+            <fileset dir='${basedir}/conf/scripts/out'/>
+		</move>
+	</target>
+
+
+    <target name="-package-etl" depends="init, process-resources">
+		<property name='tar.prefix' value='/skedul/etl_open/siac-int-01/'/>
+        <!-- impacchetta l'intera componente (file di etl) in un tar -->		
+        <tar tarfile="${target.dir}/archives/${dist-file-name}.tar">
+            <zipfileset dir="${target.dir}/${componente}">
+            </zipfileset>
+        </tar>
+    </target>
+
+    <target name="package" depends="-package-etl" description="crea il pacchetto">
+    </target>
+
+    <target name="distribution" depends="generate-configs, package " description="crea il pacchetto per il rilascio">
+        <!-- copia i tar nella usuale cartella dist -->
+        <copy todir='${dist}/${target}'>
+            <fileset dir="${target.dir}/archives" includes="*.*"/>
+        </copy>
+    </target>
+
+    <!-- -->
+    <!-- ############################################################# -->
+    <!-- # [CLEAN]: clean                                            # -->
+    <!-- ############################################################# -->
+    <!-- -->
+    <target name="clean" description="Rimuove tutti i prodotti del build (in pratica la cartella build)" depends="init">
+        <delete dir="${build}" verbose="n"/>
+    </target>
+
+    <!-- -->
+    <!-- ############################################################# -->
+    <!-- # Target: about                                             # -->
+    <!-- ############################################################# -->
+    <!-- -->
+    <target name="about" description="Visualizza l'elenco dei target
+                                    pubblici dello script.">
+
+        <loadproperties srcfile="buildfiles/build.properties"/>
+        <loadfile property="about" srcfile="buildfiles/about.txt"/>
+        <echo message="${about}"/>
+    </target>
+
+    <!-- -->
+    <!-- ############################################################# -->
+    <!-- # Target: about-custom                                      # -->
+    <!-- ############################################################# -->
+    <!-- -->
+    <target name="about-custom"
+            description="Visualizza l'elenco di tutti i target,
+                       pubblici e privati
+                       (equivalente a 'ant -projecthelp')">
+
+        <loadproperties srcfile="buildfiles/build.properties"/>
+        <loadfile property="about-custom" srcfile="buildfiles/about-custom.txt"/>
+        <echo message="${about-custom}"/>
+        <java classname="org.apache.tools.ant.Main">
+            <arg value="-projecthelp"/>
+        </java>
+    </target>
+
+	
+</project>

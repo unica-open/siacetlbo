@@ -1,0 +1,7 @@
+﻿------------------------
+SIACETLBO
+------------------------
+
+Funzionalità rilasciate
+------------------------
+build xx/xx/2019 versione 4.x.0

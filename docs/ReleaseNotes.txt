@@ -1,7 +1,32 @@
 ﻿------------------------
-SIACETLBO
+SIAC BIL ETLBO
 ------------------------
 
 Funzionalità rilasciate
-------------------------
-build xx/xx/2019 versione 4.x.0
+
+build 04/2021 versione  4.32.0
+ SIAC-8064
+
+build 11/2020 versione  4.29.0
+ SIAC-7672
+
+build 10/2020 versione  4.28.0
+ SIAC-7495 
+
+build 29/05/2019 versione  4.3.0
+ SIAC-6255
+
+build 28/01/2019 versione  4.2.0
+ riorganizzazione configurazione enti
+
+build 17/12/2018 versione  4.1.0
+ rilascio
+
+build 25/10/2018 versione  4.0.0
+ incremento versione per modifiche architettura
+
+build 29/10/2018 versione  3.15.1
+ SIAC-6487
+
+build 18/10/2018 versione  3.15.0
+ SIAC-6457

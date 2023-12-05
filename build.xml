@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: Copyright 2020 | CSI Piemonte
+SPDX-License-Identifier: EUPL-1.2
+-->
 
 <!-- ##################################################### -->
 <!-- # Copyright 2006 (c) CSI Piemonte.                  # -->
@@ -14,7 +18,7 @@
 
 <project xmlns:ivy="antlib:fr.jayasoft.ivy.ant"
          basedir="."
-         default="package"
+         default="distribution"
          name="siacetlbo">
 
     <description>Build file per la componente : [siacetlbo]</description>
@@ -40,9 +44,11 @@
 		<loadproperties srcFile="buildfiles/${target}.properties"/>
 		
         <property name="target.dir" value="${build}/${target}"/>
-        <property name="componente.dir" value="${target.dir}/${componente}"/>
+        <property name="componente.dir" value="${target.dir}/siacetlbo"/>
+        <property name="archives.dir" location="${target.dir}/archives"/>		
 
         <!-- crea l'alberatura -->
+        <mkdir dir="${archives.dir}"/>
         <mkdir dir="${componente.dir}"/>
         <mkdir dir="${target.dir}/archives"/>
 		<mkdir dir="${target.dir}/tmp"/>
@@ -61,7 +67,7 @@
     <!-- Copia tutte le risorse -->
     <target name="process-resources" depends="init">
         <!-- copia le risorse non filtrate -->
-        <copy todir="${target.dir}/${componente}">
+        <copy todir="${target.dir}/siacetlbo">
             <fileset dir="src/etlopen">
                 <exclude name="config/**/*"/>
             </fileset>
@@ -69,7 +75,7 @@
 
         <!-- copia (e filtra) le risorse da filtrare -->
         <echo level="info" message="Uso il file: ${target}.properties anche per filtrare le risorse"/>
-        <copy todir="${target.dir}/${componente}">
+        <copy todir="${target.dir}/siacetlbo">
             <fileset dir="src/etlopen">
                 <include name="config/**/*"/>
             </fileset>
@@ -122,11 +128,14 @@
 
 
     <target name="-package-etl" depends="init, process-resources">
-		<property name='tar.prefix' value='/skedul/etl_open/siac-int-01/'/>
+		<property name='tar.prefix' value='/skedul/etl_open/siac/'/>
         <!-- impacchetta l'intera componente (file di etl) in un tar -->		
-        <tar tarfile="${target.dir}/archives/${dist-file-name}.tar">
-            <zipfileset dir="${target.dir}/${componente}">
-            </zipfileset>
+        <tar tarfile="${archives.dir}/${dist-file-name}.tar">
+        	
+        	
+			<tarfileset dir='${target.dir}/siacetlbo'>
+			</tarfileset> 
+
         </tar>
     </target>
 
@@ -136,7 +145,7 @@
     <target name="distribution" depends="generate-configs, package " description="crea il pacchetto per il rilascio">
         <!-- copia i tar nella usuale cartella dist -->
         <copy todir='${dist}/${target}'>
-            <fileset dir="${target.dir}/archives" includes="*.*"/>
+            <fileset dir="${archives.dir}" includes="*.*"/>
         </copy>
     </target>
 
@@ -149,7 +158,12 @@
         <delete dir="${build}" verbose="n"/>
     </target>
 
-    <!-- -->
+
+	<!-- solo un alias per clean -->
+    <target name="clean-all" description="Rimuove tutti i prodotti del build (in pratica la cartella build)" depends="clean">
+    </target>
+
+	<!-- -->
     <!-- ############################################################# -->
     <!-- # Target: about                                             # -->
     <!-- ############################################################# -->

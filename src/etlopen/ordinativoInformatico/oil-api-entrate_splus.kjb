@@ -237,7 +237,7 @@ NOMEFILEMIF ${NOMEFILEMIF}
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>N</insertScript>
-      <script>SIACBATCH_HOME=&#47;skedul&#47;java&#47;siac-mul-01&#47;siacbatch
+      <script>SIACBATCH_HOME=&#47;skedul&#47;java&#47;siac&#47;siacbatch
 WRK_FOLDER=${siac_home.dir}&#47;dati&#47;wrk&#47;oil&#47;${FLUSSOELABMIFID}
 
 $SIACBATCH_HOME&#47;bin&#47;run.sh 																		\
@@ -281,13 +281,13 @@ $SIACBATCH_HOME&#47;bin&#47;run.sh 																		\
       <name>File Zip</name>
       <description/>
       <type>ZIP_FILE</type>
-      <zipfilename>&#47;skedul&#47;archivio&#47;siac-int-01&#47;ordinativo-uniapi&#47;${codice_ente}-${NOMEFILEMIF}-${FLUSSOELABMIFID}.zip</zipfilename>
+      <zipfilename>&#47;skedul&#47;archivio&#47;siac&#47;ordinativo-uniapi&#47;${codice_ente}-${NOMEFILEMIF}-${FLUSSOELABMIFID}.zip</zipfilename>
       <compressionrate>1</compressionrate>
       <ifzipfileexists>0</ifzipfileexists>
       <wildcard/>
       <wildcardexclude/>
       <sourcedirectory>${siac_home.dir}&#47;dati&#47;oil&#47;${FLUSSOELABMIFID}</sourcedirectory>
-      <movetodirectory>&#47;skedul&#47;archivio&#47;siac-int-01&#47;ordinativo-spazio&#47;</movetodirectory>
+      <movetodirectory>&#47;skedul&#47;archivio&#47;siac&#47;ordinativo-spazio&#47;</movetodirectory>
       <afterzip>0</afterzip>
       <addfiletoresult>N</addfiletoresult>
       <isfromprevious>N</isfromprevious>
@@ -410,7 +410,7 @@ else
 # le variabili espanse da pentaho sono
 #	FLUSSOELABMIFID, siac_home.dir, anno_bil
 SIAC_HOME=&quot;${siac_home.dir}&quot;
-OIL_UNIAPI=&quot;&#47;skedul&#47;progetti&#47;siac-int-01&#47;dati&#47;out&#47;oil-uniapi&quot;
+OIL_UNIAPI=&quot;&#47;skedul&#47;progetti&#47;siac&#47;dati&#47;out&#47;oil-uniapi&quot;
 OIL_SH_DIR=&quot;${siac_java.dir}&#47;siacbatch&#47;bin&quot;
 OIL_WRK=$SIAC_HOME&#47;dati&#47;oil
 COD_ENTE_UNIIT=&quot;${codice.ente.flussi.uniit}&quot;
@@ -481,7 +481,7 @@ Anno Bilancio : ${anno_bil}
 Qualcosa è andato storto durante lo spostamento dei file dei mandati&#47;reversali. 
 Non è stato possibile creare i file oppure alcuni di essi hanno dimensioni superiori a quelle ammesse.
 I mandati&#47;reversali sono comunqe stati generati ed archiviati con il nome
-&lt;i&gt;&#47;skedul&#47;archivio&#47;siac-int-01&#47;ordinativo-uniapi&#47;${codice_ente}-${NOMEFILEMIF}-${FLUSSOELABMIFID}.zip&lt;&#47;i&gt;
+&lt;i&gt;&#47;skedul&#47;archivio&#47;siac&#47;ordinativo-uniapi&#47;${codice_ente}-${NOMEFILEMIF}-${FLUSSOELABMIFID}.zip&lt;&#47;i&gt;
 &lt;&#47;div&gt;</comment>
       <include_files>Y</include_files>
       <zip_files>N</zip_files>

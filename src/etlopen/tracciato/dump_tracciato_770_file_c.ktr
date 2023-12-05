@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <transformation>
   <info>
     <name>dump_traciato_770_file_c</name>
@@ -279,29 +279,29 @@
            <schema_name/>
            </partitioning>
     <connection>siacdb</connection>
-    <sql>select a.tipo_record||a.codice_fiscale_ente||a.codice_fiscale_percipiente||a.tipo_percipiente||a.cognome_denominazione||a.nome||a.sesso||a.data_nascita||a.comune_nascita||a.provincia_nascita||
-a.colonna_1||a.colonna_2||a.comune_domicilio_fiscale_prec||a.comune_domicilio_spedizione||a.provincia_domicilio_spedizione||a.colonna_3||a.esclusione_precompilata||a.categorie_particolari||
-a.indirizzo_domicilio_spedizione||a.cap_domicilio_spedizione||a.colonna_4||a.codice_sede||a.comune_domicilio_fiscale||a.rappresentante_codice_fiscale||a.percipienti_esteri_no_res||
-a.percipienti_esteri_localita||a.percipienti_esteri_stato||a.percipienti_esteri_cod_fiscale||a.ex_causale||a.ammontare_lordo_corrisposto||a.somme_no_ritenute_regime_conv||a.altre_somme_no_ritenute||
-a.imponibile_b||a.ritenute_titolo_acconto_b||a.ritenute_titolo_imposta_b||a.ritenute_sospese_b||a.anticipazione||a.anno||a.add_reg_titolo_acconto_b||a.add_reg_titolo_imposta_b||a.add_reg_sospesa_b||a.imponibile_anni_prec||
-a.ritenute_operate_anni_prec||a.contr_prev_carico_sog_erogante||a.contr_prev_carico_sog_percipie||a.spese_rimborsate||a.ritenute_rimborsate||a.colonna_5||a.percipienti_esteri_via_numciv||
-a.colonna_6||a.eventi_eccezionali||a.somme_prima_data_fallimento||a.somme_curatore_commissario||colonna_7||a.colonna_8||a.codice||a.colonna_9||a.codice_fiscale_e||a.imponibile_e||
-a.ritenute_titolo_acconto_e||ritenute_titolo_imposta_e||ritenute_sospese_e||add_reg_titolo_acconto_e||add_reg_titolo_imposta_e||a.add_reg_sospesa_e||a.add_com_titolo_acconto_e||
-a.add_com_titolo_imposta_e||a.add_com_sospesa_e||a.add_com_titolo_acconto_b||a.add_com_titolo_imposta_b||a.add_com_sospesa_b||a.colonna_10||a.codice_fiscale_redd_diversi_f||a.codice_fiscale_pignoramento_f||
-a.codice_fiscale_esproprio_f||a.colonna_11||a.colonna_12||a.colonna_13||a.colonna_14||a.colonna_15||a.colonna_16||a.colonna_17||a.colonna_18||a.colonna_19||a.colonna_20||a.colonna_21||a.colonna_22||
-a.colonna_23||a.codice_fiscale_ente_prev||a.denominazione_ente_prev ||a.codice_ente_prev||a.codice_azienda||a.categoria||a.altri_contributi||a.importo_altri_contributi||a.contributi_dovuti||a.contributi_versati||
-a.causale||a.colonna_24||a.colonna_25||a.colonna_26||a.colonna_27||anno_competenza||a.ex_ente||a.progressivo||a.matricola||a.codice_tributo||a.versione_tracciato_procsi||a.colonna_28||a.caratteri_controllo_1 riga_tracciato 
-from  tracciato_770_quadro_c a
-where 0=0
-and   a.elab_id = (select max(elab_id)
-                   from  tracciato_770_quadro_c b
-                   where a.ente_proprietario_id = b.ente_proprietario_id
-                   and   a.anno_competenza = b.anno_competenza
-                  )
-and   a.ente_proprietario_id = ${ente_proprietario_id}
-and   a.anno_competenza = &apos;${anno_bilancio}&apos;
+    <sql>--select a.tipo_record||a.codice_fiscale_ente||a.codice_fiscale_percipiente||a.tipo_percipiente||a.cognome_denominazione||a.nome||a.sesso||a.data_nascita||a.comune_nascita||a.provincia_nascita||
+--a.colonna_1||a.colonna_2||a.comune_domicilio_fiscale_prec||a.comune_domicilio_spedizione||a.provincia_domicilio_spedizione||a.colonna_3||a.esclusione_precompilata||a.categorie_particolari||
+--a.indirizzo_domicilio_spedizione||a.cap_domicilio_spedizione||a.colonna_4||a.codice_sede||a.comune_domicilio_fiscale||a.rappresentante_codice_fiscale||a.percipienti_esteri_no_res||
+--a.percipienti_esteri_localita||a.percipienti_esteri_stato||a.percipienti_esteri_cod_fiscale||a.ex_causale||a.ammontare_lordo_corrisposto||a.somme_no_ritenute_regime_conv||a.altre_somme_no_ritenute||
+--a.imponibile_b||a.ritenute_titolo_acconto_b||a.ritenute_titolo_imposta_b||a.ritenute_sospese_b||a.anticipazione||a.anno||a.add_reg_titolo_acconto_b||a.add_reg_titolo_imposta_b||a.add_reg_sospesa_b||a.imponibile_anni_prec||
+--a.ritenute_operate_anni_prec||a.contr_prev_carico_sog_erogante||a.contr_prev_carico_sog_percipie||a.spese_rimborsate||a.ritenute_rimborsate||a.colonna_5||a.percipienti_esteri_via_numciv||
+--a.colonna_6||a.eventi_eccezionali||a.somme_prima_data_fallimento||a.somme_curatore_commissario||colonna_7||a.colonna_8||a.codice||a.colonna_9||a.codice_fiscale_e||a.imponibile_e||
+--a.ritenute_titolo_acconto_e||ritenute_titolo_imposta_e||ritenute_sospese_e||add_reg_titolo_acconto_e||add_reg_titolo_imposta_e||a.add_reg_sospesa_e||a.add_com_titolo_acconto_e||
+--a.add_com_titolo_imposta_e||a.add_com_sospesa_e||a.add_com_titolo_acconto_b||a.add_com_titolo_imposta_b||a.add_com_sospesa_b||a.colonna_10||a.codice_fiscale_redd_diversi_f||a.codice_fiscale_pignoramento_f||
+--a.codice_fiscale_esproprio_f||a.colonna_11||a.colonna_12||a.colonna_13||a.colonna_14||a.colonna_15||a.colonna_16||a.colonna_17||a.colonna_18||a.colonna_19||a.colonna_20||a.colonna_21||a.colonna_22||
+--a.colonna_23||a.codice_fiscale_ente_prev||a.denominazione_ente_prev ||a.codice_ente_prev||a.codice_azienda||a.categoria||a.altri_contributi||a.importo_altri_contributi||a.contributi_dovuti||a.contributi_versati||
+--a.causale||a.colonna_24||a.colonna_25||a.colonna_26||a.colonna_27||anno_competenza||a.ex_ente||a.progressivo||a.matricola||a.codice_tributo||a.versione_tracciato_procsi||a.colonna_28||a.caratteri_controllo_1 riga_tracciato 
+--from  tracciato_770_quadro_c a
+--where 0=0
+--and   a.elab_id = (select max(elab_id)
+--                   from  tracciato_770_quadro_c b
+--                   where a.ente_proprietario_id = b.ente_proprietario_id
+--                   and   a.anno_competenza = b.anno_competenza
+--                  )
+--and   a.ente_proprietario_id = ${ente_proprietario_id}
+--and   a.anno_competenza = &apos;${anno_bilancio}&apos;
 
-</sql>
+select * from fnc_770_estrai_tracciato_quadro_c_f (&apos;${anno_bilancio}&apos;,${ente_proprietario_id},&apos;C&apos;)</sql>
     <limit>${alltables.limit_size}</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -309,8 +309,8 @@ and   a.anno_competenza = &apos;${anno_bilancio}&apos;
     <lazy_conversion_active>Y</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>277</xloc>
-      <yloc>222</yloc>
+      <xloc>276</xloc>
+      <yloc>218</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -347,8 +347,8 @@ and   a.anno_competenza = &apos;${anno_bilancio}&apos;
       <append>N</append>
       <split>N</split>
       <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
+      <add_date>Y</add_date>
+      <add_time>Y</add_time>
       <SpecifyFormat>N</SpecifyFormat>
       <date_time_format/>
       <add_to_result_filenames>Y</add_to_result_filenames>
@@ -372,7 +372,7 @@ and   a.anno_competenza = &apos;${anno_bilancio}&apos;
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>519</xloc>
+      <xloc>523</xloc>
       <yloc>222</yloc>
       <draw>Y</draw>
       </GUI>

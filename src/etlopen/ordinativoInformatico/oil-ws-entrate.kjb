@@ -408,7 +408,7 @@ NOMEFILEMIF ${NOMEFILEMIF}
       <add_date>N</add_date>
       <add_time>N</add_time>
       <insertScript>N</insertScript>
-      <script>SIACBATCH_HOME=&#47;skedul&#47;java&#47;siac-mul-01&#47;siacbatch
+      <script>SIACBATCH_HOME=&#47;skedul&#47;java&#47;siac&#47;siacbatch
 WRK_FOLDER=${siac_home.dir}&#47;dati&#47;wrk&#47;oil&#47;${FLUSSOELABMIFID}
 
 $SIACBATCH_HOME&#47;bin&#47;run.sh 																		\

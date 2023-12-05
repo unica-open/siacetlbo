@@ -247,8 +247,8 @@ and extsys_ente_code = &apos;${codice_ente}&apos;;</sql>
     <use_formatting>Y</use_formatting>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>557</xloc>
-      <yloc>213</yloc>
+      <xloc>558</xloc>
+      <yloc>212</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

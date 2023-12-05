@@ -861,7 +861,7 @@ var path = getVariable(&quot;work_area.dir&quot;,&quot;&quot;) + &quot;&#47;&quo
         <jsScript_script>var codice_ente = getVariable(&quot;codice_ente&quot;,&quot;EEEE&quot;);
 var codice_prod = getVariable(&quot;cod_producer&quot;,&quot;PPPPPP&quot;);
 
-folder = &quot;&#47;skedul&#47;archivio&#47;siac-int-01&#47;atti&#47;&quot; + codice_prod + &quot;&#47;&quot; + codice_ente;
+folder = &quot;&#47;skedul&#47;archivio&#47;siac&#47;atti&#47;&quot; + codice_prod + &quot;&#47;&quot; + codice_ente;
 
 &#47;&#47; short_filename has trailing spaces (due to field definition?)
 &#47;&#47; trim to make sure to remove 

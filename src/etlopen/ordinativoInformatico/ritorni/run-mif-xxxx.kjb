@@ -33,7 +33,7 @@
         </parameter>
         <parameter>
             <name>oil.archivio.backups.dir</name>
-            <default_value>&#47;skedul&#47;archivio&#47;siac-int-01&#47;ordinativo-spazio2</default_value>
+            <default_value>&#47;skedul&#47;archivio&#47;siac&#47;ordinativo-spazio2</default_value>
             <description>Cartella dove sono spostati i file dopo l&apos;elaborazione</description>
         </parameter>
         <parameter>

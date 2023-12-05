@@ -143,8 +143,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>493</xloc>
-      <yloc>139</yloc>
+      <xloc>291</xloc>
+      <yloc>54</yloc>
       </entry>
     <entry>
       <name>run impegno</name>
@@ -173,8 +173,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>878</xloc>
-      <yloc>134</yloc>
+      <xloc>294</xloc>
+      <yloc>188</yloc>
       </entry>
     <entry>
       <name>run liquidazione</name>
@@ -203,8 +203,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>307</xloc>
-      <yloc>321</yloc>
+      <xloc>577</xloc>
+      <yloc>195</yloc>
       </entry>
     <entry>
       <name>run ordinativo_incasso</name>
@@ -233,8 +233,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>580</xloc>
-      <yloc>320</yloc>
+      <xloc>285</xloc>
+      <yloc>344</yloc>
       </entry>
     <entry>
       <name>run ordinativo_pagamento</name>
@@ -263,8 +263,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>897</xloc>
-      <yloc>319</yloc>
+      <xloc>604</xloc>
+      <yloc>335</yloc>
       </entry>
     <entry>
       <name>Successo</name>
@@ -273,8 +273,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>846</xloc>
-      <yloc>886</yloc>
+      <xloc>858</xloc>
+      <yloc>898</yloc>
       </entry>
     <entry>
       <name>run all views</name>
@@ -303,8 +303,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>436</xloc>
-      <yloc>642</yloc>
+      <xloc>559</xloc>
+      <yloc>466</yloc>
       </entry>
     <entry>
       <name>run documento spesa</name>
@@ -333,8 +333,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>624</xloc>
-      <yloc>641</yloc>
+      <xloc>784</xloc>
+      <yloc>498</yloc>
       </entry>
     <entry>
       <name>run documento entrata</name>
@@ -363,8 +363,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>842</xloc>
-      <yloc>638</yloc>
+      <xloc>781</xloc>
+      <yloc>614</yloc>
       </entry>
     <entry>
       <name>run programma</name>
@@ -393,8 +393,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>618</xloc>
-      <yloc>769</yloc>
+      <xloc>509</xloc>
+      <yloc>748</yloc>
       </entry>
     <entry>
       <name>run iva</name>
@@ -423,8 +423,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>843</xloc>
-      <yloc>770</yloc>
+      <xloc>785</xloc>
+      <yloc>746</yloc>
       </entry>
     <entry>
       <name>run contabilita generale</name>
@@ -453,8 +453,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>436</xloc>
-      <yloc>769</yloc>
+      <xloc>272</xloc>
+      <yloc>753</yloc>
       </entry>
     <entry>
       <name>run capitolo_vincoli</name>
@@ -483,7 +483,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>435</xloc>
+      <xloc>265</xloc>
       <yloc>890</yloc>
       </entry>
     <entry>
@@ -513,8 +513,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>642</xloc>
-      <yloc>140</yloc>
+      <xloc>549</xloc>
+      <yloc>53</yloc>
       </entry>
     <entry>
       <name>run capitolo_spesa</name>
@@ -543,7 +543,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>682</xloc>
+      <xloc>271</xloc>
       <yloc>468</yloc>
       </entry>
     <entry>
@@ -573,8 +573,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>556</xloc>
-      <yloc>890</yloc>
+      <xloc>459</xloc>
+      <yloc>989</yloc>
       </entry>
     <entry>
       <name>run capitolo_fpv</name>
@@ -603,8 +603,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>708</xloc>
-      <yloc>888</yloc>
+      <xloc>632</xloc>
+      <yloc>894</yloc>
       </entry>
   </entries>
   <hops>
@@ -622,7 +622,7 @@
       <to>run documento spesa</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -631,7 +631,7 @@
       <to>run documento entrata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -640,7 +640,7 @@
       <to>run iva</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -649,7 +649,7 @@
       <to>run programma</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -658,7 +658,7 @@
       <to>run contabilita generale</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -748,7 +748,7 @@
       <to>run programma_cronop</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -757,13 +757,31 @@
       <to>run capitolo_fpv</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>run capitolo_fpv</from>
       <to>Successo</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>run all views</from>
+      <to>run contabilita generale</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>run capitolo_vincoli</from>
+      <to>run capitolo_fpv</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

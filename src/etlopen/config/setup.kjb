@@ -61,8 +61,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>340</xloc>
-      <yloc>125</yloc>
+      <xloc>341</xloc>
+      <yloc>60</yloc>
       </entry>
     <entry>
       <name>START</name>
@@ -131,7 +131,8 @@ codice.ente.flussi.uniit = ${codice.ente.flussi.uniit}
 VARIABILI DI TEMPO
 
 TODAY                 : ${TODAY}
-A_NOW                 : ${A_NOW}</logmessage>
+A_NOW                 : ${A_NOW}
+</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject>cfg.config</logsubject>
       <parallel>N</parallel>
@@ -152,8 +153,8 @@ A_NOW                 : ${A_NOW}</logmessage>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>199</xloc>
-      <yloc>124</yloc>
+      <xloc>191</xloc>
+      <yloc>128</yloc>
       </entry>
   </entries>
   <hops>

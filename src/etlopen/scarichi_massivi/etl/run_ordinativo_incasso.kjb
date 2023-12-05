@@ -173,7 +173,7 @@ select siac.fnc_siac_dwh_ordinativo_incasso(&apos;${anno_bilancio}&apos;,${ente_
       <specify_wildcard>N</specify_wildcard>
       <wildcard/>
       <wildcardexclude/>
-      <destination_folder>&#47;interscambio_ent&#47;skedul&#47;siac-int-01&#47;out&#47;scarichi_massivi</destination_folder>
+      <destination_folder>&#47;interscambio_nivola&#47;skedul&#47;siac&#47;out&#47;scarichi_massivi</destination_folder>
       <nr_errors_less_than>10000</nr_errors_less_than>
       <success_condition>success_if_no_errors</success_condition>
       <add_date>N</add_date>
@@ -200,7 +200,7 @@ select siac.fnc_siac_dwh_ordinativo_incasso(&apos;${anno_bilancio}&apos;,${ente_
       <specify_wildcard>N</specify_wildcard>
       <wildcard/>
       <wildcardexclude/>
-      <destination_folder>&#47;interscambio_isole&#47;skedul&#47;siac-int-01&#47;out&#47;scarichi_massivi</destination_folder>
+      <destination_folder>&#47;interscambio_nivola&#47;skedul&#47;siac&#47;out&#47;scarichi_massivi</destination_folder>
       <nr_errors_less_than>10000</nr_errors_less_than>
       <success_condition>success_if_no_errors</success_condition>
       <add_date>N</add_date>

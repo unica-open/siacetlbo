@@ -138,11 +138,11 @@
       <delete_all_before>Y</delete_all_before>
       <fields>
         <field>
-          <name>&#47;interscambio_ent&#47;skedul&#47;${cod_producer}&#47;out&#47;per-siac&#47;attiAmministrativi</name>
+          <name>&#47;interscambio_nivola&#47;skedul&#47;${cod_producer}&#47;out&#47;per-siac&#47;attiAmministrativi</name>
           <filemask>ATTI_${codice_ente}-\d{14}-\d{14}(\.txt$)?</filemask>
         </field>
         <field>
-          <name>&#47;interscambio_ent&#47;skedul&#47;${cod_producer}&#47;out&#47;per-siac&#47;attiAmministrativi</name>
+          <name>&#47;interscambio_nivola&#47;skedul&#47;${cod_producer}&#47;out&#47;per-siac&#47;attiAmministrativi</name>
           <filemask>ATTI_${codice_ente}_\d{14}-\d{14}(\.txt$)?</filemask>
         </field>
       </fields>

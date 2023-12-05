@@ -97,6 +97,31 @@
             <description/>
         </parameter>
         <parameter>
+            <name>p19_elenco_variazioni</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>p19_flag_applica_var</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>p19_flag_cambia_stato</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>p19_nome_tabella</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>p19_stato_var</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
             <name>setImporti</name>
             <default_value>true</default_value>
             <description>true=imposta importi da gestione o previsoine precedenti, false=imposta gli importi a zero</description>
@@ -183,8 +208,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>252</xloc>
-      <yloc>47</yloc>
+      <xloc>248</xloc>
+      <yloc>49</yloc>
       </entry>
     <entry>
       <name>START</name>

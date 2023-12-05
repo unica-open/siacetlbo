@@ -1,4 +1,7 @@
 #!/bin/bash
+#SPDX-FileCopyrightText: Copyright 2020 | CSI Piemonte
+#SPDX-License-Identifier: EUPL-1.2
+
 
 AMB=$1
 
@@ -15,12 +18,16 @@ do
   
 	while read p
 	do
-		pn=`cut -d'=' -f1 <<< $p`
-		pv=`cut -d'=' -f2 <<< $p`
-		sed -i -e "s|@@$pn|$pv|g" $OUT
+		pn=$(cut -d'=' -f1 <<< "$p")
+		pv=$(cut -d'=' -f2 <<< "$p")
+		sed -i -e "s|@@$pn|${pv//&/\\&}|g" $OUT
+		
 	done < $FILE_NAME
 	
 	echo "creato file configurazione $OUT"
 done
 
 exit
+
+
+####

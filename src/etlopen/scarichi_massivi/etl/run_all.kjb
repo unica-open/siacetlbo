@@ -143,8 +143,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>324</xloc>
-      <yloc>133</yloc>
+      <xloc>144</xloc>
+      <yloc>146</yloc>
       </entry>
     <entry>
       <name>run capitolo_entrata</name>
@@ -173,8 +173,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>556</xloc>
-      <yloc>134</yloc>
+      <xloc>410</xloc>
+      <yloc>149</yloc>
       </entry>
     <entry>
       <name>run impegno</name>
@@ -203,8 +203,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>878</xloc>
-      <yloc>134</yloc>
+      <xloc>141</xloc>
+      <yloc>250</yloc>
       </entry>
     <entry>
       <name>run liquidazione</name>
@@ -233,8 +233,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>307</xloc>
-      <yloc>321</yloc>
+      <xloc>387</xloc>
+      <yloc>248</yloc>
       </entry>
     <entry>
       <name>run ordinativo_incasso</name>
@@ -263,8 +263,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>580</xloc>
-      <yloc>320</yloc>
+      <xloc>138</xloc>
+      <yloc>359</yloc>
       </entry>
     <entry>
       <name>run ordinativo_pagamento</name>
@@ -293,8 +293,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>897</xloc>
-      <yloc>319</yloc>
+      <xloc>469</xloc>
+      <yloc>354</yloc>
       </entry>
     <entry>
       <name>run soggetto</name>
@@ -323,8 +323,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>209</xloc>
-      <yloc>467</yloc>
+      <xloc>125</xloc>
+      <yloc>473</yloc>
       </entry>
     <entry>
       <name>Successo</name>
@@ -347,8 +347,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>437</xloc>
-      <yloc>136</yloc>
+      <xloc>299</xloc>
+      <yloc>146</yloc>
       </entry>
     <entry>
       <name>dfn2</name>
@@ -361,8 +361,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>692</xloc>
-      <yloc>135</yloc>
+      <xloc>540</xloc>
+      <yloc>150</yloc>
       </entry>
     <entry>
       <name>dfn3</name>
@@ -375,8 +375,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>163</xloc>
-      <yloc>321</yloc>
+      <xloc>274</xloc>
+      <yloc>249</yloc>
       </entry>
     <entry>
       <name>dfn4</name>
@@ -389,8 +389,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>442</xloc>
-      <yloc>319</yloc>
+      <xloc>556</xloc>
+      <yloc>252</yloc>
       </entry>
     <entry>
       <name>dfn5</name>
@@ -403,8 +403,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>717</xloc>
-      <yloc>320</yloc>
+      <xloc>311</xloc>
+      <yloc>350</yloc>
       </entry>
     <entry>
       <name>dfn6</name>
@@ -417,7 +417,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>898</xloc>
+      <xloc>561</xloc>
       <yloc>465</yloc>
       </entry>
     <entry>
@@ -447,8 +447,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>577</xloc>
-      <yloc>467</yloc>
+      <xloc>450</xloc>
+      <yloc>473</yloc>
       </entry>
     <entry>
       <name>dfn7</name>
@@ -461,8 +461,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>408</xloc>
-      <yloc>467</yloc>
+      <xloc>269</xloc>
+      <yloc>473</yloc>
       </entry>
     <entry>
       <name>run all views</name>
@@ -491,8 +491,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>436</xloc>
-      <yloc>642</yloc>
+      <xloc>350</xloc>
+      <yloc>640</yloc>
       </entry>
     <entry>
       <name>dfn8</name>
@@ -535,8 +535,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>624</xloc>
-      <yloc>641</yloc>
+      <xloc>524</xloc>
+      <yloc>640</yloc>
       </entry>
     <entry>
       <name>run documento entrata</name>
@@ -565,8 +565,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>842</xloc>
-      <yloc>638</yloc>
+      <xloc>697</xloc>
+      <yloc>640</yloc>
       </entry>
     <entry>
       <name>run programma</name>

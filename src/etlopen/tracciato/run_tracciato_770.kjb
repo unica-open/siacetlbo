@@ -13,17 +13,17 @@
     <parameters>
         <parameter>
             <name>anno_bilancio</name>
-            <default_value>2016</default_value>
+            <default_value>2021</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>codice_ente</name>
-            <default_value>CRP</default_value>
+            <default_value>REGP</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>ente_proprietario_id</name>
-            <default_value/>
+            <default_value>2</default_value>
             <description/>
         </parameter>
         <parameter>
@@ -199,7 +199,7 @@
     <database>${siacdb.name}</database>
     <port>${siacdb.port}</port>
     <username>${siacdb.username}</username>
-    <password>${siacdb.password}</password>
+    <password>Encrypted 2be98afc85a9480948948a250d0b1ee8a</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>

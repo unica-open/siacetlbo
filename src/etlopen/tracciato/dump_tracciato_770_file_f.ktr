@@ -279,24 +279,24 @@
            <schema_name/>
            </partitioning>
     <connection>siacdb</connection>
-    <sql>select a.tipo_record||a.codice_fiscale_ente||a.codice_fiscale_percipiente||a.tipo_percipiente||a.cognome_denominazione||a.nome||a.sesso||a.data_nascita||a.comune_nascita||a.provincia_nascita||
-a.comune_domicilio_fiscale||a.provincia_domicilio_fiscale||a.indirizzo_domicilio_fiscale||a.colonna_1||a.colonna_2||a.colonna_3||a.colonna_4||a.cap_domicilio_spedizione||a.colonna_5||
-a.codice_stato_estero||a.codice_identif_fiscale_estero||a.causale||a.ammontare_lordo_corrisposto||a.somme_no_soggette_ritenuta||a.aliquota||a.ritenute_operate||a.ritenute_sospese||
-a.codice_fiscale_rappr_soc||a.cognome_denom_rappr_soc||a.nome_rappr_soc||a.sesso_rappr_soc||a.data_nascita_rappr_soc||a.comune_nascita_rappr_soc||a.provincia_nascita_rappr_soc||
-a.comune_dom_fiscale_rappr_soc||a.provincia_rappr_soc||a.indirizzo_rappr_soc||a.codice_stato_estero_rappr_soc||a.rimborsi||a.colonna_6||a.colonna_7||a.colonna_8||a.colonna_9||a.colonna_10||
-a.colonna_11||a.colonna_12||a.colonna_13||a.colonna_14||a.colonna_15||a.colonna_16||a.colonna_17||a.colonna_18||a.colonna_19||a.colonna_20||a.colonna_21||a.colonna_22||a.colonna_23||
-a.anno_competenza||a.ex_ente||a.progressivo||a.matricola||a.codice_tributo||a.versione_tracciato_procsi||a.colonna_28||a.caratteri_controllo_1 riga_tracciato
-from  tracciato_770_quadro_f a
-where 0=0
-and   a.elab_id = (select max(elab_id)
-                   from  tracciato_770_quadro_f b
-                   where a.ente_proprietario_id = b.ente_proprietario_id
-                   and   a.anno_competenza = b.anno_competenza
-                  )
-and   a.ente_proprietario_id = ${ente_proprietario_id}
-and   a.anno_competenza = &apos;${anno_bilancio}&apos;
+    <sql>--select a.tipo_record||a.codice_fiscale_ente||a.codice_fiscale_percipiente||a.tipo_percipiente||a.cognome_denominazione||a.nome||a.sesso||a.data_nascita||a.comune_nascita||a.provincia_nascita||
+--a.comune_domicilio_fiscale||a.provincia_domicilio_fiscale||a.indirizzo_domicilio_fiscale||a.colonna_1||a.colonna_2||a.colonna_3||a.colonna_4||a.cap_domicilio_spedizione||a.colonna_5||
+--a.codice_stato_estero||a.codice_identif_fiscale_estero||a.causale||a.ammontare_lordo_corrisposto||a.somme_no_soggette_ritenuta||a.aliquota||a.ritenute_operate||a.ritenute_sospese||
+--a.codice_fiscale_rappr_soc||a.cognome_denom_rappr_soc||a.nome_rappr_soc||a.sesso_rappr_soc||a.data_nascita_rappr_soc||a.comune_nascita_rappr_soc||a.provincia_nascita_rappr_soc||
+--a.comune_dom_fiscale_rappr_soc||a.provincia_rappr_soc||a.indirizzo_rappr_soc||a.codice_stato_estero_rappr_soc||a.rimborsi||a.colonna_6||a.colonna_7||a.colonna_8||a.colonna_9||a.colonna_10||
+--a.colonna_11||a.colonna_12||a.colonna_13||a.colonna_14||a.colonna_15||a.colonna_16||a.colonna_17||a.colonna_18||a.colonna_19||a.colonna_20||a.colonna_21||a.colonna_22||a.colonna_23||
+--a.anno_competenza||a.ex_ente||a.progressivo||a.matricola||a.codice_tributo||a.versione_tracciato_procsi||a.colonna_28||a.caratteri_controllo_1 riga_tracciato
+--from  tracciato_770_quadro_f a
+--where 0=0
+--and   a.elab_id = (select max(elab_id)
+--                   from  tracciato_770_quadro_f b
+--                   where a.ente_proprietario_id = b.ente_proprietario_id
+--                   and   a.anno_competenza = b.anno_competenza
+--                  )
+--and   a.ente_proprietario_id = ${ente_proprietario_id}
+--and   a.anno_competenza = &apos;${anno_bilancio}&apos;
 
-</sql>
+select * from fnc_770_estrai_tracciato_quadro_c_f (&apos;${anno_bilancio}&apos;,${ente_proprietario_id},&apos;F&apos;)</sql>
     <limit>${alltables.limit_size}</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -342,8 +342,8 @@ and   a.anno_competenza = &apos;${anno_bilancio}&apos;
       <append>N</append>
       <split>N</split>
       <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
+      <add_date>Y</add_date>
+      <add_time>Y</add_time>
       <SpecifyFormat>N</SpecifyFormat>
       <date_time_format/>
       <add_to_result_filenames>Y</add_to_result_filenames>
